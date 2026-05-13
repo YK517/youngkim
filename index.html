@@ -291,3 +291,411 @@
         }
 
         .edu-card .degree {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 1rem;
+            color: var(--accent2); margin-bottom: 0.3rem;
+        }
+        .edu-card .school {
+            font-family: var(--font-display);
+            font-weight: 800; font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        .edu-card .date { color: var(--muted); font-size: 0.85rem; }
+
+        .contact-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr; gap: 3rem;
+        }
+
+        .contact-info h3 {
+            font-family: var(--font-display);
+            font-weight: 700; font-size: 1.1rem;
+            color: var(--accent); margin-bottom: 1.5rem;
+        }
+
+        .contact-detail {
+            display: flex; gap: 0.75rem; align-items: flex-start;
+            margin-bottom: 1.25rem;
+        }
+        .contact-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+        .contact-text strong {
+            display: block; font-family: var(--font-display);
+            font-weight: 600; font-size: 0.85rem;
+            color: var(--text); margin-bottom: 0.1rem;
+        }
+        .contact-text span { color: var(--muted); font-size: 0.85rem; }
+        .contact-text a { color: var(--muted); text-decoration: none; }
+        .contact-text a:hover { color: var(--accent); }
+
+        .contact-form-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px; padding: 2.5rem;
+        }
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 0.78rem; font-weight: 600;
+            letter-spacing: 0.06em; text-transform: uppercase;
+            color: var(--muted); margin-bottom: 0.4rem;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%; padding: 0.85rem 1rem;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            border-radius: 10px; color: var(--text);
+            font-family: var(--font-body); font-size: 0.9rem;
+            transition: all 0.25s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: rgba(74,240,196,0.04);
+        }
+        .form-group textarea { min-height: 130px; resize: vertical; }
+
+        .honors-list { display: flex; flex-wrap: wrap; gap: 1rem; }
+        .honor-badge {
+            display: flex; align-items: center; gap: 0.6rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 50px; padding: 0.6rem 1.2rem;
+            font-size: 0.85rem; transition: all 0.3s;
+        }
+        .honor-badge:hover {
+            border-color: rgba(74,240,196,0.4); color: var(--accent);
+        }
+        .honor-badge span { color: var(--accent); }
+
+        footer {
+            text-align: center; padding: 3rem 6%;
+            border-top: 1px solid var(--border);
+            position: relative; z-index: 1;
+        }
+        footer p { color: var(--muted); font-size: 0.85rem; margin-bottom: 0.3rem; }
+
+        hr.divider {
+            border: none; border-top: 1px solid var(--border);
+            max-width: 1200px; margin: 0 auto;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .contact-wrap { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            nav ul { gap: 1.2rem; }
+            .nav-logo { font-size: 1rem; }
+            .hero-profile-row { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<nav>
+    <div class="nav-logo">YJK</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://youngjkim.weebly.com/about.html" target="_blank" rel="noopener">Previous Portfolio ↗</a></li>
+    </ul>
+</nav>
+
+<section id="home">
+    <div class="hero-inner">
+        <div class="hero-tag">📍 Woodstock, MD</div>
+        <h1 class="hero-name">Young Jin<br><span>Kim</span></h1>
+        <p class="hero-subtitle">Information Systems · Network · Supply Chain</p>
+        <div class="hero-profile-row">
+            <div class="hero-profile-chip"><span>🏫</span> UMBC · Dec 2025 &nbsp;|&nbsp; B.S. Information Systems</div>
+            <div class="hero-profile-chip"><span>🏫</span> HCC · Dec 2021 &nbsp;|&nbsp; A.S.E. Computer Engineering</div>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<section id="experience">
+    <div class="section-label">Work History</div>
+    <h2 class="section-title">Experience</h2>
+    <p class="section-desc">Over 15 years of professional experience spanning network administration and global supply chain management.</p>
+    <div class="timeline">
+        <div class="tl-item">
+            <div class="tl-meta">
+                <span class="tl-date">Jan 2010 – Oct 2013</span>
+                <span class="tl-company">Network Database Systems, LLC · Cary, NC</span>
+            </div>
+            <div class="tl-title">Network Administrator</div>
+            <ul class="tl-points">
+                <li>Monitored company networks, managed data, and performed periodic backups</li>
+                <li>Secured file and application servers; configured routers, switches, firewalls, and VPNs</li>
+                <li>Designed and installed the organization's network infrastructure</li>
+                <li>Regularly updated, maintained, and troubleshot network equipment and software</li>
+            </ul>
+        </div>
+        <div class="tl-item">
+            <div class="tl-meta">
+                <span class="tl-date">Aug 2003 – Dec 2009</span>
+                <span class="tl-company">VIAS International, LLC · Austin, TX</span>
+            </div>
+            <div class="tl-title">Supply Chain Management Specialist</div>
+            <ul class="tl-points">
+                <li>Managed overseas ordering for semiconductor equipment spare and maintenance parts</li>
+                <li>Maintained remote inventory for AMD, Intel, Motorola, TI, Samsung, and Hynix</li>
+                <li>Achieved average 2.1% YOY improvement in quantity management via Real-Time Monitoring (RTM)</li>
+                <li>Improved delivery and production time by coordinating with overseas suppliers</li>
+                <li>Performed periodic file server backup and data stabilization</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<section id="skills">
+    <div class="section-label">Technical Proficiency</div>
+    <h2 class="section-title" style="background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline-block;">Skills</h2>
+    <p class="section-desc">Broad technical background across software development, systems, and operations.</p>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <div class="skill-icon">💻</div>
+            <h4>Programming Languages</h4>
+            <div class="skill-tags">
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">PHP</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">MATLAB</span>
+                <span class="skill-tag">R</span>
+                <span class="skill-tag">Haskell</span>
+                <span class="skill-tag">Visual Basic</span>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">🌐</div>
+            <h4>Web Technologies</h4>
+            <div class="skill-tags">
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">PHP</span>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">🛠️</div>
+            <h4>Tools & Environments</h4>
+            <div class="skill-tags">
+                <span class="skill-tag">VS Code</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Eclipse</span>
+                <span class="skill-tag">Putty</span>
+                <span class="skill-tag">AutoCAD</span>
+                <span class="skill-tag">Jupyter</span>
+                <span class="skill-tag">Microsoft Office</span>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">🖥️</div>
+            <h4>Operating Systems</h4>
+            <div class="skill-tags">
+                <span class="skill-tag">Windows Server 2008</span>
+                <span class="skill-tag">Windows 7/11</span>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">iOS</span>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">🔧</div>
+            <h4>Infrastructure & Ops</h4>
+            <div class="skill-tags">
+                <span class="skill-tag">Hardware Assembly</span>
+                <span class="skill-tag">Troubleshooting</span>
+                <span class="skill-tag">VPN Setup</span>
+                <span class="skill-tag">VMware</span>
+                <span class="skill-tag">Hyper-V</span>
+                <span class="skill-tag">Network Design</span>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon">🌏</div>
+            <h4>Languages</h4>
+            <div class="skill-tags">
+                <span class="skill-tag">Korean (Native)</span>
+                <span class="skill-tag">English (Professional)</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<section id="education">
+    <div class="section-label">Academic Background</div>
+    <h2 class="section-title">Education</h2>
+    <p class="section-desc">Combining computer engineering foundations with information systems expertise.</p>
+    <div class="edu-grid" style="margin-bottom: 2rem;">
+        <div class="edu-card">
+            <div class="degree">B.S. Information Systems</div>
+            <div class="school">University of Maryland, Baltimore County</div>
+            <div class="date">December 2025 · Dean's List Fall 2024</div>
+        </div>
+        <div class="edu-card">
+            <div class="degree">A.S.E. Computer Engineering</div>
+            <div class="school">Howard Community College</div>
+            <div class="date">December 2021 · Dean's List Spring 2020</div>
+        </div>
+    </div>
+    <div class="honors-list">
+        <div class="honor-badge"><span>🏅</span> UMBC Dean's List — Fall 2024</div>
+        <div class="honor-badge"><span>🏅</span> HCC Dean's List — Spring 2020</div>
+        <div class="honor-badge"><span>🇰🇷</span> Korean Military Veteran</div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<section id="contact">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Contact Me</h2>
+    <p class="section-desc">Feel free to reach out for opportunities, collaborations, or just to connect.</p>
+    <div class="contact-wrap">
+        <div class="contact-info">
+            <h3>Contact Details</h3>
+            <div class="contact-detail">
+                <div class="contact-icon">📧</div>
+                <div class="contact-text">
+                    <strong>Email</strong>
+                    <a href="mailto:youngkim517@gmail.com">youngkim517@gmail.com</a>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <div class="contact-icon">📞</div>
+                <div class="contact-text">
+                    <strong>Phone</strong>
+                    <span>(512) 789-4242</span>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <div class="contact-icon">📍</div>
+                <div class="contact-text">
+                    <strong>Location</strong>
+                    <span>Woodstock, MD 21163</span>
+                </div>
+            </div>
+            <div class="contact-detail">
+                <div class="contact-icon">🌐</div>
+                <div class="contact-text">
+                    <strong>Previous Portfolio</strong>
+                    <a href="https://youngjkim.weebly.com/about.html" target="_blank" rel="noopener">youngjkim.weebly.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form-box">
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" required placeholder="your@email.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" name="subject" required placeholder="What's this about?">
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message" required placeholder="Your message..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width:100%;border:none;font-size:1rem;">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Young Jin Kim · Woodstock, MD</p>
+    <p>Designed with passion for creating change.</p>
+</footer>
+
+<script>
+const canvas = document.getElementById('bg-canvas');
+const ctx = canvas.getContext('2d');
+
+function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+const pts = Array.from({ length: 70 }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    vx: (Math.random() - 0.5) * 0.4,
+    vy: (Math.random() - 0.5) * 0.4,
+    r: Math.random() * 1.8 + 0.6
+}));
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    pts.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(74,240,196,0.6)';
+        ctx.fill();
+    });
+    pts.forEach((a, i) => {
+        pts.slice(i + 1).forEach(b => {
+            const dx = a.x - b.x, dy = a.y - b.y;
+            const d = Math.sqrt(dx * dx + dy * dy);
+            if (d < 140) {
+                ctx.beginPath();
+                ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+                ctx.strokeStyle = `rgba(74,240,196,${0.18 * (1 - d / 140)})`;
+                ctx.lineWidth = 0.5;
+                ctx.stroke();
+            }
+        });
+    });
+    requestAnimationFrame(draw);
+}
+draw();
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+        e.preventDefault();
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) t.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for your message! I will get back to you soon.');
+    this.reset();
+});
+</script>
+</body>
+</html>
+
